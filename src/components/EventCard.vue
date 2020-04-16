@@ -8,7 +8,6 @@
       <h4 class="title">{{ event.title }}</h4>
       <BaseIcon name="users">{{ event.attendees.length }} attending</BaseIcon>
       <MediaBox>
-        <h2 slot="paragraph">Adam Jahr</h2>
         <p>My words.</p>
       </MediaBox>
     </div>
@@ -16,7 +15,11 @@
 </template>
 
 <script>
+import MediaBox from "@/components/MediaBox.vue";
 export default {
+  components: {
+    MediaBox
+  },
   data() {
     return {
       event: {
