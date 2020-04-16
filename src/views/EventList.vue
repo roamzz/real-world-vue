@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1 class="test">Event List</h1>
+    <h1 class="test">Event Listing</h1>
 
-    <event-card></event-card>
+    <event-card v-for="(event,index) in events" :key="index" :event="event"></event-card>
 
     <base-icon name="activity" width="48" height="48"></base-icon>
   </div>
@@ -14,11 +14,16 @@ export default {
   components: {
     EventCard
   },
+data() {
+    return {
+        events: []
+    }
+},
   created() {
     this.$axios
       .get("events") // Does a get request
       .then(response => {
-        console.log(response.data); // For now, logs out the response
+        this.events = response.data // <--- set the events when returned
       })
       .catch(error => {
         console.log("There was an error:", error.response); // Logs out the error

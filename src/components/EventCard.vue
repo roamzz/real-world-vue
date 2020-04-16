@@ -1,8 +1,9 @@
 <template>
   <router-link
     class="event-link"
-    :to="{ name: 'event-show', params: { id: '1' } }"
+    :to="{ name: 'event-show', params: { id: event.id } }"
   >
+{{event}}
     <div class="event-card -shadow">
       <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
       <h4 class="title">{{ event.title }}</h4>
@@ -17,27 +18,30 @@
 <script>
 import MediaBox from "@/components/MediaBox.vue";
 export default {
+  props: {
+    event: Object
+  },
   components: {
     MediaBox
   },
   data() {
     return {
-      event: {
-        id: 1,
-        title: "Park Cleanup",
-        date: "Tue Aug 19, 2020",
-        time: "6:00",
-        attendees: [
-          {
-            id: "abd123",
-            name: "Adam"
-          },
-          {
-            id: "abc123",
-            name: "Carl"
-          }
-        ]
-      }
+    //  event: {
+    //    id: 1,
+    //    title: "Park Cleanup",
+    //    date: "Tue Aug 19, 2020",
+    //    time: "6:00",
+    //    attendees: [
+    //      {
+    //        id: "abd123",
+    //        name: "Adam"
+    //      },
+    //      {
+    //        id: "abc123",
+    //        name: "Carl"
+    //      }
+    //    ]
+    //  }
     };
   }
 };
