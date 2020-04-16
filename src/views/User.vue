@@ -1,19 +1,16 @@
 <template>
-  <h1>This is user {{ username}}'s page</h1>
+  <h1>This is user {{ username }}'s page</h1>
 </template>
 
 <script>
 export default {
-props: {
+  props: {
     username: {
-        type: String,
-        default: ''
-    },
-},
-
-}
+      type: String,
+      default: ""
+    }
+  }
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

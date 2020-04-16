@@ -4,15 +4,12 @@
 
 <script>
 export default {
-props: {
+  props: {
     id: {
-        type: Number,
-    },
-},
-
-}
+      type: Number
+    }
+  }
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
