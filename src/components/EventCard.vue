@@ -1,13 +1,19 @@
 <template>
-      <router-link class="event-link" :to="{ name: 'event-show', params: { id: '1' } }">
-        <div class="event-card -shadow">
-          <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
-          <h4 class="title">{{ event.title }}</h4>
-            <BaseIcon name="users" />
-          <span>{{ event.attendees.length }} attending</span>
-        </div>
-      </router-link>
-    </template>
+  <router-link
+    class="event-link"
+    :to="{ name: 'event-show', params: { id: '1' } }"
+  >
+    <div class="event-card -shadow">
+      <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
+      <h4 class="title">{{ event.title }}</h4>
+      <BaseIcon name="users">{{ event.attendees.length }} attending</BaseIcon>
+      <MediaBox>
+        <h2 slot="paragraph">Adam Jahr</h2>
+        <p>My words.</p>
+      </MediaBox>
+    </div>
+  </router-link>
+</template>
 
 <script>
 export default {
@@ -35,7 +41,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .event-card {
   padding: 20px;
   margin-bottom: 24px;
