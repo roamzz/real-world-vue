@@ -8,16 +8,28 @@
       </li>
     </ol>
     <small>There are {{ catLength }} categories.</small>
+<p>{{ getEventById(1)}}</p>
+
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 export default {
   computed: {
-    catLength() {
-      return this.$store.getters.catLength;
-    },
+    ...mapGetters(["catLength", "activeTodosCount", "doneTodos" , "getEventById"]),
+    //catLength() {
+    //  return this.$store.getters.catLength;
+    //},
+    //todosLength() {
+    //  return this.$store.getters.activeTodosCount;
+    //},
+    //doneTodos() {
+    //  return this.$store.getters.doneTodos;
+    //},
+    //getEvent() {
+    //  return this.$store.getters.getEventById;
+    //},
     ...mapState(["categories", "user"]) // <-- using object spread operator
   }
   //computed: mapState({
