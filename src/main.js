@@ -6,7 +6,11 @@ import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import axios from './plugins/axios';
 Vue.prototype.$axios = axios;
+import BaseIcon from '@/components/BaseIcon'
 
+Vue.component('BaseIcon', BaseIcon)
+
+Vue.config.productionTip = false;
 
     const requireComponent = require.context(
       './components',
@@ -29,7 +33,7 @@ Vue.prototype.$axios = axios;
       )
     })
 
-Vue.config.productionTip = false;
+
 
 new Vue({
   router,

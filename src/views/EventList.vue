@@ -4,7 +4,7 @@
 
     <event-card v-for="(event,index) in events" :key="index" :event="event"></event-card>
 
-    <base-icon name="activity" width="48" height="48"></base-icon>
+    <!--<base-icon name="activity" width="48" height="48"></base-icon>-->
   </div>
 </template>
 

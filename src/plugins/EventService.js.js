@@ -17,3 +17,7 @@ export default {
     return apiClient.get('/events/' + id);
   },
 };
+
+
+//sudo npm install -g json-server
+//json-server --watch db.json

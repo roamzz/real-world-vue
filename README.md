@@ -22,3 +22,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Install the Server
+``` sudo npm install -g json-server
+```
+
+### Run the Server
+```
+json-server --watch db.json
+```
