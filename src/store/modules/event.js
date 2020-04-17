@@ -39,7 +39,7 @@ export const mutations = {
 };
 
 export const actions = {
-  fetchEvents({ commit }, { perPage, page }) {
+  fetchEvents({ commit, dispatch }, { perPage, page }) {
     EventService.getEvents(perPage, page)
       .then((response) => {
         console.log('Total events are ' + response.headers['x-total-count']);
@@ -48,9 +48,14 @@ export const actions = {
       })
       .catch((error) => {
         console.log('There was an error:', error.response);
+        const notification = {
+          type: 'error',
+          message: 'There was a problem fetching events: ' + error.message,
+        };
+        dispatch('notification/add', notification, { root: true });
       });
   },
-  fetchEvent({ commit, getters }, id) {
+  fetchEvent({ commit, getters, dispatch }, id) {
     console.log(id);
 
     var event = getters.getEventById(id);
@@ -64,13 +69,25 @@ export const actions = {
           commit('SET_EVENT', response.data);
         })
         .catch((error) => {
-          console.log('There was an error:', error.response);
+          const notification = {
+            type: 'error',
+            message: 'There was a problem fetching an event: ' + error.message,
+          };
+          dispatch('notification/add', notification, {
+            root: true,
+          });
         });
     }
   },
-  createEvent({ commit }, payload) {
+  createEvent({ commit , dispatch}, payload) {
     return EventService.postEvent(payload).then(() => {
       commit('ADD_EVENT', payload.data);
+      const notification = {
+        type: 'success',
+        message: 'Your event has been created!',
+      };
+      dispatch('notification/add', notification, { root: true });
+    //  throw error;
     });
   },
   updateCount({ state, commit }, payload) {
@@ -90,9 +107,7 @@ export const getters = {
   activeTodosCount: (state) => {
     return state.todos.filter((todo) => !todo.done).length;
   },
-  getEventById: (state) => (id) => {
-    console.log(state.events.find((event) => event.id === id));
-
-    return state.events.find((event) => event.id === id);
-  },
+ getEventById: state => id => {
+    return state.events.find(event => event.id === id)
+  }
 };
