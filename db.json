@@ -116,6 +116,24 @@
       "date": "2020-04-09T15:44:00.000Z",
       "time": "3:00",
       "attendees": []
+    },
+    {
+      "id": 1997458,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": "my newly event title",
+      "description": "dsads",
+      "location": "home",
+      "date": "2020-04-02T17:18:00.000Z",
+      "time": "3:00",
+      "attendees": []
     }
   ]
 }

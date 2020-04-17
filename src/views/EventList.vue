@@ -6,7 +6,7 @@
     {{ page }}
     Events total : {{ eventsTotal }}
     <event-card
-      v-for="(event, index) in newEvents"
+      v-for="(event, index) in events"
       :key="index"
       :event="event"
     ></event-card>
@@ -43,10 +43,12 @@ export default {
     };
   },
   created() {
-    this.events_per_page = 3;
+    this.events_per_page = 3; // Setting perPage here and not in data means it won't be reactive.
+    // We don't need it to be reactive, and this way our component has access to it.
+
     this.$store.dispatch("fetchEvents", {
-      perPage: this.events_per_page, // <-- How many items to display per page
-      page: this.page // <-- What page we're on
+      perPage: this.events_per_page,
+      page: this.page
     });
 
     //this.$axios
@@ -60,10 +62,12 @@ export default {
   },
   computed: {
     page() {
-      this.$store.dispatch("fetchEvents", {
-        perPage: this.events_per_page,
-        page: parseInt(this.$route.query.page)
-      });
+      if (parseInt(this.$route.query.page)) {
+        this.$store.dispatch("fetchEvents", {
+          perPage: this.events_per_page,
+          page: parseInt(this.$route.query.page)
+        });
+      }
 
       if (
         parseInt(this.$route.query.page) * this.events_per_page >
@@ -77,7 +81,7 @@ export default {
     hasNextPage() {
       return this.eventsTotal > this.page * this.events_per_page;
     },
-    ...mapState(["newEvents", "eventsTotal"])
+    ...mapState(["events", "eventsTotal"])
   }
 };
 </script>
