@@ -44,6 +44,78 @@
       "date": "2019-02-02T23:27:00.000Z",
       "time": "1:00",
       "attendees": []
+    },
+    {
+      "id": 8621900,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": "my title",
+      "description": "my descr",
+      "location": "Athens",
+      "date": "2020-04-02T14:48:00.000Z",
+      "time": "17:00",
+      "attendees": []
+    },
+    {
+      "id": 6979892,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": "ddd",
+      "description": "asa",
+      "location": "asa",
+      "date": "2020-04-09T14:52:00.000Z",
+      "time": "1:00",
+      "attendees": []
+    },
+    {
+      "id": 43434,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": "Title aa",
+      "description": "balh ",
+      "location": "Athens",
+      "date": "2020-04-17T14:53:00.000Z",
+      "time": "3:00",
+      "attendees": []
+    },
+    {
+      "id": 4450889,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": ",y new event",
+      "description": "adsdada",
+      "location": "anywhere",
+      "date": "2020-04-09T15:44:00.000Z",
+      "time": "3:00",
+      "attendees": []
     }
   ]
 }

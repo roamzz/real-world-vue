@@ -10,14 +10,17 @@ const apiClient = axios.create({
 });
 
 export default {
-  getEvents() {
-    return apiClient.get('/events');
-  },
+getEvents(perPage, page) {
+        return apiClient.get('/events?_limit=' + perPage + '&_page=' + page)
+      },
   getEvent(id) {
     return apiClient.get('/events/' + id);
   },
-};
+  postEvent(event) {
+    return apiClient.post('/events', event);
+  },
 
+};
 
 //sudo npm install -g json-server
 //json-server --watch db.json
