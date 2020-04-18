@@ -24,14 +24,6 @@ notification
       'food',
       'community',
     ]
-  },
-  mutations: {
-
-  },
-  actions: {
-  },
-  getters: {
-
-  },
+  }
 
 });

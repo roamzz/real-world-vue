@@ -260,6 +260,60 @@
       "date": "2020-04-08T09:46:00.000Z",
       "time": "4:00",
       "attendees": []
+    },
+    {
+      "id": 7698206,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": "aaa",
+      "description": "aaa",
+      "location": "aaa",
+      "date": "2020-04-08T09:55:00.000Z",
+      "time": "3:00",
+      "attendees": []
+    },
+    {
+      "id": 3472318,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": "dsa",
+      "description": "asd",
+      "location": "sad",
+      "date": "2020-04-02T10:01:00.000Z",
+      "time": "4:00",
+      "attendees": []
+    },
+    {
+      "id": 7455576,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": "dsd",
+      "description": "sad",
+      "location": "asd",
+      "date": "2020-04-01T10:02:00.000Z",
+      "time": "4:00",
+      "attendees": []
     }
   ]
 }
