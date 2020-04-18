@@ -7,6 +7,7 @@ import camelCase from 'lodash/camelCase'
 import axios from './plugins/axios';
 Vue.prototype.$axios = axios;
 import BaseIcon from '@/components/BaseIcon'
+import 'nprogress/nprogress.css'
 
 Vue.component('BaseIcon', BaseIcon)
 

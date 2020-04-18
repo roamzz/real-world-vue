@@ -56,11 +56,11 @@ export const actions = {
       });
   },
   fetchEvent({ commit, getters, dispatch }, id) {
-    console.log(id);
-
     var event = getters.getEventById(id);
 
     if (event) {
+    console.log("if event dont fetch it");
+
       // If we do, set the event
       commit('SET_EVENT', event);
     } else {
