@@ -5,10 +5,12 @@ import store from "./store";
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import axios from './plugins/axios';
-Vue.prototype.$axios = axios;
 import BaseIcon from '@/components/BaseIcon'
 import 'nprogress/nprogress.css'
+import Vuelidate from 'vuelidate'
 
+Vue.use(Vuelidate);
+Vue.prototype.$axios = axios;
 Vue.component('BaseIcon', BaseIcon)
 
 Vue.config.productionTip = false;

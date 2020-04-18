@@ -5,6 +5,7 @@ import EventCreate from '../views/EventCreate.vue';
 import EventList from '../views/EventList.vue';
 import EventShow from '../views/EventShow.vue';
 import NotFound from '../views/NotFound.vue';
+import Example from '../views/Example.vue';
 //import User from "../views/User.vue";
 //import EventCard from "../components/EventCard.vue";
 
@@ -36,6 +37,11 @@ const routes = [
     path: '/404',
     name: '404',
     component: NotFound,
+  },
+  {
+    path: '/example',
+    name: 'example',
+    component: Example,
   },
   {
     // Here's the new catch all route
