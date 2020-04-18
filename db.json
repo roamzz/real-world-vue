@@ -314,6 +314,24 @@
       "date": "2020-04-01T10:02:00.000Z",
       "time": "4:00",
       "attendees": []
+    },
+    {
+      "id": 2013460,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": "as",
+      "description": "as",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
