@@ -332,6 +332,24 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 9277951,
+      "user": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Irene"
+      },
+      "title": "education title",
+      "description": "education descriotion",
+      "location": "education location",
+      "date": "",
+      "time": "3:00",
+      "attendees": []
     }
   ]
 }
