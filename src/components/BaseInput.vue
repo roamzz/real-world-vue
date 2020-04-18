@@ -10,19 +10,22 @@
 </template>
 
 <script>
+import { formFieldMixin } from '../mixins/formFieldMixin'
+
 export default {
-inheritAttrs: false,
+mixins: [formFieldMixin], // register mixin
+//inheritAttrs: false,
   props: {
-    label: String,
+    //label: String,
     value: [String, Number]
   },
 
-  methods: {
-    updateValue(event) {
-      // <-- method triggered by input event
-      this.$emit("input", event.target.value);
-    }
-  }
+//  methods: {
+//    updateValue(event) {
+//      // <-- method triggered by input event
+//      this.$emit("input", event.target.value);
+//    }
+//  }
 };
 </script>
 
