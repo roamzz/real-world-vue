@@ -8,7 +8,10 @@ import axios from './plugins/axios';
 import BaseIcon from '@/components/BaseIcon'
 import 'nprogress/nprogress.css'
 import Vuelidate from 'vuelidate'
+import DateFilter from './filters/date'
 
+//global filter date
+Vue.filter('date', DateFilter)
 Vue.use(Vuelidate);
 Vue.prototype.$axios = axios;
 Vue.component('BaseIcon', BaseIcon)
